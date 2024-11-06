@@ -118,6 +118,8 @@ Here is the deployed contract address:
 
 AstroPet deployed to: 0x2Fad953E1F524e6590EdF50BDA6FCB391Dd4Fd96
 
+https://evm-testnet.flowscan.io/address/0x2Fad953E1F524e6590EdF50BDA6FCB391Dd4Fd96
+
 # Contributing
 - Fork the Repository:
 - Create a New Branch:
