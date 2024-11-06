@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroPet</title>
+    <style>
+        :root {
+            --primary: #6d28d9;
+            --secondary: #ec4899;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #4c1d95, #1e1b4b, #000);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiPjxjaXJjbGUgY3g9IjUiIGN5PSI1IiByPSIxIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==');
+            animation: twinkling 10s linear infinite;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wallet-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .wallet-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .play-btn {
+            font-size: 1.5rem;
+            padding: 1rem 4rem;
+            border-radius: 9999px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        .play-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        @keyframes twinkling {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+
+        @keyframes shine {
+            from { transform: rotate(45deg) translateX(-100%); }
+            to { transform: rotate(45deg) translateX(100%); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">AstroPet</div>
+            <button class="wallet-btn">Connect Wallet</button>
+        </header>
+
+        <main class="main-content">
+            <button class="play-btn">PLAY NOW</button>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Active Players</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Pets</h3>
+                    <p>45,678</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Trading Volume</h3>
+                    <p>890 ETH</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

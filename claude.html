@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroPet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-black text-white">
+    <!-- Stars Background -->
+    <div class="fixed inset-0 opacity-50">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjMiIGN5PSIzIiByPSIxIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==')] bg-repeat"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10">
+        <!-- Header -->
+        <header class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                AstroPet
+            </h1>
+            <button class="px-6 py-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all">
+                Connect Wallet
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 pt-20 pb-12 text-center">
+            <!-- Pet Avatar -->
+            <div class="animate-float mb-12">
+                <div class="w-32 h-32 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+            </div>
+
+            <!-- Play Button -->
+            <button class="mb-20 px-12 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/25">
+                PLAY NOW
+            </button>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                    <h3 class="text-lg font-medium mb-2">Active Players</h3>
+                    <p class="text-3xl font-bold text-purple-400">1,234</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                    <h3 class="text-lg font-medium mb-2">Total Pets</h3>
+                    <p class="text-3xl font-bold text-purple-400">5,678</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                    <h3 class="text-lg font-medium mb-2">Trading Volume</h3>
+                    <p class="text-3xl font-bold text-purple-400">890 ETH</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
