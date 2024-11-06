@@ -20,7 +20,7 @@ module.exports = {
 },
 
 etherscan: {
-  //apiKey: "4CZFJHHXHR9WRAA9J6TWCT4KBWT2NC5W1E", // Leave empty or remove this section
+  apiKey: "4CZFJHHXHR9WRAA9J6TWCT4KBWT2NC5W1E",
   customChains: [
     {
       network: "EVMOnFlowTestnet",
