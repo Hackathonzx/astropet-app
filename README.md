@@ -4,6 +4,15 @@
 
 AstroPet is an Ethereum-based NFT and event management platform where users can mint unique pets, participate in community events, and earn rewards. The platform includes ETH-based rewards for users and a customizable NFT experience with unique properties for each minted pet.
 
+# Flow Network Integration
+
+- Blockchain: Flow Network
+- Deployment: All smart contracts are deployed on the Flow network, leveraging its scalability and low transaction costs to deliver an efficient and user-friendly experience.
+- API Usage: Integration with Alchemy's API for the Flow network enables seamless data retrieval, transaction handling, and enhanced user experience within the AstroPet ecosystem.
+
+# Team Information
+A team of Blockchain developer and a Fullstack developer.
+
 # Features
 
 **NFT Minting**: 
@@ -101,17 +110,13 @@ AstroPet Contract
 
 - Run npx hardhat compile to compile the contract.
 
-- Run npx hardhat run ignition/modules/deploy.js --network arbitrumSepolia to deploy the contract.
+- Run npx hardhat run ignition/modules/deploy.js --network EVMOnFlowTestnet to deploy the contract.
 
 Deploy the contract by running:
 
 Here is the deployed contract address:
 
-AstroPet deployed to: 0xA0BF7F60ec762cc7b88dEc415D46F12cFF130a55
-
-And here is the Etherscan link address:
-
-etherscan link: https://sepolia.arbiscan.io/address/0xA0BF7F60ec762cc7b88dEc415D46F12cFF130a55
+AstroPet deployed to: 0x2Fad953E1F524e6590EdF50BDA6FCB391Dd4Fd96
 
 # Contributing
 - Fork the Repository:
